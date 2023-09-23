@@ -1,0 +1,250 @@
+/* * {
+    border: .0625rem solid red;
+} */
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.attribution {
+  font-size: .6875rem;
+  text-align: center;
+  color: #000;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;    
+}
+
+
+body {
+    width: 100%;
+    height: fit-content;
+    color: white;
+}
+
+.container {
+    max-width: 1440px;
+    height: fit-content;
+    margin: 0 auto;
+    background-color: var(--red);
+    background-image: url('/images/bg-intro-desktop.png');
+    display: flex;
+    flex-direction: row;
+}
+
+/* LEFT SECTION */
+
+.left-sect {
+    width: 50%; /* 720 */
+    height: auto;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 40.2777778% 0 0 22.9166667%;
+}
+
+.left-sect>p {
+    margin-top: 4.1666667%;
+    font-weight: 600;
+    line-height: 1.5625rem;
+    opacity: 0.75;
+    margin-left: 22.9166667%;
+
+}
+
+/* RIGHT SECTION */
+
+.right-sect {
+    width: 50%; /* 720 */
+    display: flex;
+    flex-direction: column;
+}
+
+.try-free {
+    width: 75%;/* 33.75rem; */
+    margin: 16.666% 0 4.629% 2.7777778%;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 1.25rem 0 1.25rem 0;
+    background-color: var(--blue);
+    font-size: .9375rem;
+    border-radius: .625rem;
+    box-shadow: 0 .5rem rgba(0, 0, 0, 0.15);
+}
+
+form {
+    width: 75%;
+    background-color: white;
+    color: #000;
+    border-radius: .625rem;
+    margin: 0 0 16.6666667% 2.7777778%;
+    box-shadow: 0 .5rem rgba(0, 0, 0, 0.15);
+}
+
+form>input {
+    margin: 0 0 3.7037037% 7.4074074%;
+    width: 85.1851852%;
+    height: 3.4375rem;
+    border-radius: .3125rem;
+    border: .0625rem solid hsl(255, 11%, 65%, 0.5);
+    font-weight: 700;
+    color: var(--dark-blue);
+    font-size: .875rem;
+    padding-left: 30px;
+
+}   
+
+input::placeholder {
+    font-weight: 700;
+    font-size: .875rem;
+}
+
+form input:first-child {
+    margin-top: 7.4074074%;
+}
+
+.btn {
+    margin: 0 0 0.9259259% 7.4074074%;
+    width: 85.1851852%;
+    height: 3.4375rem;
+    padding: 0;
+    border-radius: .3125rem;
+    border: .0625rem solid hsl(255, 11%, 65%, 0.5);
+    background-color: var(--green);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.807);
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 .1875rem hsl(154, 56%, 46%);
+}
+
+.btn:hover,
+.btn:active {
+    cursor: pointer;
+    background-color: hsl(154, 89%, 68%);
+
+}
+
+form>p {
+    text-align: center;
+    font-size: .6875rem;
+    font-weight: 700;
+    color: hsl(251, 14%, 84%);
+    margin-bottom: 2.8125rem;
+}
+
+p>a {
+    text-decoration: none;
+    color: var(--red);
+}
+
+.valid {
+    border: .125rem solid red;
+    background-image: url('/images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right 1.5625rem bottom .875rem;
+    margin: 0 0 1% 7.4074074%;
+}
+
+.error {
+    display: block;
+    color: red;
+    font-size: .75rem;
+    font-style: italic;
+    margin: 0;
+    text-align: right;
+    margin-right: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 650px) {
+
+    .container {
+        max-width: 375px;
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .left-sect {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .left-sect>h1 {
+        font-size: 30px;
+        margin: 100px 0 30px 0;
+    }
+
+    .left-sect>p {
+        width: 330px;
+        margin: 0 auto;
+        margin-bottom: 55px;
+        
+    }
+
+    .right-sect {
+        width: 100%;
+        text-align: center;
+    }
+
+    .try-free {
+        width: 325px;
+        height: 90px;
+        margin: 0 auto;
+        padding-left: 55px;
+        padding-right: 55px;
+        line-height: 25px;
+        margin-bottom: 25px;
+    }
+
+    form {
+        width: 325px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+
+    form>input {
+        width: 280px;
+        height: 55px;
+        margin-left: 0;
+        padding-left: 20px;
+    }
+
+    .btn {
+        margin-left: 0;
+    }
+
+    form>p {
+        width: 250px;
+        margin: 0 auto;
+        margin-top: 15px;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+    
+}
+
+
+
+
